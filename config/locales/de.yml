@@ -216,5 +216,9 @@ de:
         p1: "Das CH++ Techrating bietet einen Einblick in die technologische und wissenschaftliche Affinität von Politikerinnen und Politikern. Es dient als Orientierungshilfe, um besser einschätzen zu können, welchen Stellenwert Wissenschaft und Technologie in ihrer politischen Agenda einnehmen."
         p2: "Nutzen Sie das CH++ Techrating, um sich ein Bild von der technologischen und wissenschaftlichen Einstellung Ihrer Kandidierenden zu machen. Es hilft Ihnen, informierte Entscheidungen bei Wahlen zu treffen."
         p3: "Bitte beachten Sie, dass das CH++ Techrating eine Momentaufnahme darstellt und auf den aktuellen Daten basiert. Es ist als ergänzendes Informationsinstrument gedacht und sollte in Kombination mit anderen Faktoren und Informationsquellen herangezogen werden, wenn es darum geht, sich eine Meinung zu bilden."
+    coda:
+      title: "CODA"
+      paragraphs:
+        open: "Code und Daten des CH++ Techratings sind selbstverständlich öffentlich zugänglich:<ul><li>Code: <a href=\"https://github.com/CHplusplus/futuretechrating\">https://github.com/CHplusplus/futuretechrating</a></li><li>Daten: <a href=\"https://www.futuretechrating.ch/data_export.zip\">https://www.futuretechrating.ch/data_export.zip</a></li></ul>"
 
 
