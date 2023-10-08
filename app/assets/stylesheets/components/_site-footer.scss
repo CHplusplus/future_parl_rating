@@ -1,0 +1,39 @@
+.site-footer {
+  color: var(--storm-cloud);
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  @extend .page-margin;
+
+  .content-center {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .legal {
+    display: flex;
+    font-size: var(--text-sm);
+    gap: 2.4rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: var(--nightshade-blue);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .site-footer {
+    .content-center {
+      flex-direction: column;
+      gap: 1.6rem;
+      justify-content: center;
+    }
+  }
+}

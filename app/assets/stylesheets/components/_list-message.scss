@@ -1,0 +1,39 @@
+.list-message {
+  align-items: center;
+  background: var(--lighthouse);
+  border-radius: var(--rounded-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  justify-content: center;
+  padding: 4.8rem 2.4rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @include transition;
+
+  .icon {
+    color: var(--moon-landing);
+    font-size: 8rem;
+  }
+
+  p {
+    color: var(--storm-cloud);
+    max-width: 36rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .list-item {
+    border-radius: var(--rounded-2xl);
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .list-item {
+    gap: .8rem;
+    padding: .8rem;
+  }
+}

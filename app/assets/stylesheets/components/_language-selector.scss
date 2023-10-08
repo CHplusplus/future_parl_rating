@@ -1,0 +1,35 @@
+.language-selector {
+  position: relative;
+}
+
+.language-button {
+  color: white;
+  padding: 0 0.8rem;
+  @extend .button;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.language-dropdown {
+  position: absolute;
+  display: none;
+  top: 6rem;
+  right: 0;
+  @extend .dropdown;
+}
+
+.language-dropdown.active {
+  display: block;
+}
+
+#alt-theme {
+	.language-button {
+		color: var(--nightshade-blue);
+
+		&:hover {
+			color: var(--spanish-violet);
+		}
+	}
+}

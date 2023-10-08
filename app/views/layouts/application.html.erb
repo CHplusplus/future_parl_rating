@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @title %></title>
+    <link rel="icon" type="image/svg+xml" href="<%=asset_url('favicon.svg')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="title" content="<%= @title %>">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="<%= @title %>">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="<%= @title %>">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    <meta charset="UTF-8">
+    <meta name="turbolinks-cache-control" content="no-cache">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <%= javascript_include_tag "https://code.jquery.com/jquery-3.6.0.min.js" %>
+
+    <%= javascript_importmap_tags %>
+    <script defer data-domain="futuretechrating.ch" src="https://plausible.io/js/script.js"></script>
+
+
+  </head>
+
+  <body id="<%=controller_name%>_<%=action_name%>" data-turbo-action="<%='replace' if controller_name == 'people' && action_name == 'index' %>">
+  <div id="alt-theme">
+    <%= render 'layouts/header' %>  
+
+    <% if controller_name == 'people' && action_name == 'index' %>
+      <div id="modal-kantons" class="modal-container" data-filter-cantons-url="<%= filter_cantons_people_path %>" data-get-canton-filter-url="<%= get_canton_filter_people_path %>">
+        <div class="modal">
+          <div class="modal-header">
+            <h3><%= t("modal.cantons.title") %></h3>
+            <a href="#" class="close-kantons"><i class="icon ph ph-x"><span class="sr-only">Close</span></i></a>
+          </div>
+
+          <div class="modal-body">
+            <div class="checkbox-list">
+              <label class="checkbox-container all-canton-label"><strong><%= t("modal.cantons.all") %></strong>
+              <input type="checkbox" id="all-canton-checkbox" checked>
+              <span class="checkmark"></span>
+              </label>
+
+              <% canton_codes = I18n.t("cantons") %>
+                <% canton_codes.each do |code, name| %>
+                  <label class="checkbox-container"><%= name %> (<%= code %>)
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                <% end %>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="button-text"><%= t("modal.cantons.deselect") %></a>
+            <a href="#" class="button-primary"><%= t("modal.cantons.apply") %></a>
+          </div>
+        </div>
+      </div>
+      <!-- /modal-kantons -->
+
+      <div id="modal-parteiens" class="modal-container" data-get-party-filter-url="<%= get_party_filter_people_path %>" data-filter-parties-url="<%= filter_parties_people_path %>">
+        <div class="modal">
+          <div class="modal-header">
+            <h3><%= t("modal.parties.title") %></h3>
+            <a href="#" class="close-parteiens"><i class="icon ph ph-x"><span class="sr-only">Close</span></i></a>
+          </div>
+
+          <div class="modal-body">
+            <div class="checkbox-list">
+              <label class="checkbox-container"><strong><%= t("modal.parties.all") %></strong>
+              <input type="checkbox" class="all-parties" id="all-party-checkbox" value="All" checked>
+                <span class="checkmark"></span>
+              </label>
+
+              <% party_codes = I18n.t("parties") %>
+              <% party_codes.each do |code, name| %>
+                <label class="checkbox-container"><%= name %>
+                  <input type="checkbox" class="party-checkbox" value="<%= code %>">
+                  <span class="checkmark"></span>
+                </label>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="button-text"><%= t("modal.parties.deselect") %></a>
+            <a href="#" class="button-primary apply-button"><%= t("modal.parties.apply") %></a>
+          </div>
+        </div>
+      </div>
+      <!-- /modal-parties -->
+    <% end %>
+    
+    <main>
+      <% unless controller_name == 'people' && action_name == 'show' %>
+        <div class="masthead-index">
+          <div class="content-center">
+            <h1><%= @title %></h1>
+            <% if controller_name == 'people' && action_name == 'index' %>
+              <div class="masthead-actions">
+              <form action="<%= people_path %>" method="get" id="search-form">
+                <input type="text" name="search" class="input-search" placeholder="<%= t("navigation.search") %>" id="search-input" value="<%= params[:search] %>" data-people-url="<%= people_path(format: :js) %>">
+                <input type="hidden" name="order" id="order-input" value="<%= params[:order] %>">
+                <input type="submit" value="Search" style="display: none;">
+              </form>
+                <div class="button-container" id="kantons">
+                  <div id="cantons_indicator" class="indicator">22</div>
+                  <a href="#modal-kantons" class="button-primary"><i class="icon ph ph-sliders"></i><%= t("navigation.cantons") %></a>
+                </div>
+          
+                <div class="button-container" id="parteiens">
+                  <div id="parties_indicator" class="indicator">22</div>
+                  <a href="#modal-parteien" class="button-primary"><i class="icon ph ph-sliders"></i><%= t("navigation.parties") %></a>
+                </div>
+          
+                <div class="sort-button-container"
+                data-sort-by-points-ascending-url="<%= people_path(order: 'ascending', search: params[:search]) %>"
+                data-sort-by-points-descending-url="<%= people_path(order: 'descending', search: params[:search]) %>">
+              
+                  <a href="#" class="button-primary"><i class="icon ph ph-sort-ascending"></i><%= t("navigation.sort") %></a>
+          
+                  <div id="sort-dropdown" class="sort-dropdown">
+                    <ul>
+                      <li><a href="#" class="option1 active"><%= t("modal.sort.descending") %> <i class="icon ph ph-check-circle-fill"></i></a></li>
+                      <li><a href="#" class="option2"><%= t("modal.sort.ascending") %> <i></i></a></li>
+                    </ul>
+                  </div>
+          
+                </div>
+                
+              </div>
+              <!-- /masthead-actions -->
+            <% end %>
+          </div>
+        </div>
+        <!-- /masthead -->
+      <% end %>
+      <%= yield %>
+    </main>
+    <!-- /main -->
+
+    <%= render 'layouts/footer' %>
+  </div>
+  </body>
+</html>

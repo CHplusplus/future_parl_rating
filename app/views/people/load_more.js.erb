@@ -1,0 +1,8 @@
+$("#people-container").append('<%= j render(@people) %>');
+$("#loading").hide();
+
+<% if @people.next_page %>
+  $(window).data("next-page", <%= @people.next_page %>);
+<% else %>
+  $(window).data("next-page", null);
+<% end %>

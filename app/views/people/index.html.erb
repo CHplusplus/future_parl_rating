@@ -1,0 +1,20 @@
+<div class="ranking-list">
+  <div class="content-center" id="people-container">
+
+  <% if @people.any? %>
+      <%= render partial: "person", collection: @people %>
+    <% else %>
+      <div class="list-message">
+        <i class="icon ph ph-file-x-thin"></i>
+        <p>
+        <%= t("no_results") %>
+        </p>
+        </div>
+      </div>
+    <% end %>
+ 
+</div>
+
+
+
+

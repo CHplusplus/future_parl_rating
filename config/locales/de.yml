@@ -1,0 +1,220 @@
+de:
+  page_title: "CH++ Techrating"
+  banner_text: "Zum Bisherigen-Check"
+  cantons:
+    AG: Aargau
+    AR: Appenzell Ausserrhoden
+    AI: Appenzell Innerrhoden
+    BL: Basel-Landschaft
+    BS: Basel-Stadt
+    BE: Bern
+    FR: Freiburg
+    GE: Genf
+    GL: Glarus
+    GR: Graubünden
+    JU: Jura
+    LU: Luzern
+    NE: Neuenburg
+    NW: Nidwalden
+    OW: Obwalden
+    SG: St. Gallen
+    SH: Schaffhausen
+    SZ: Schwyz
+    SO: Solothurn
+    TG: Thurgau
+    TI: Tessin
+    UR: Uri
+    VS: Wallis
+    VD: Waadt
+    ZG: Zug
+    ZH: Zürich
+  parties:
+    SVP: Schweizerische Volkspartei
+    SP: Sozialdemokratische Partei der Schweiz
+    FDP: FDP.Die Liberalen
+    CVP: Die Mitte
+    GPS: Grüne Partei der Schweiz
+    GLP: Grünliberale Partei
+    BDP: Bürgerlich-Demokratische Partei
+    EVP: Evangelische Volkspartei
+    EDU: Eidgenössisch-Demokratische Union
+    PdA: Partei der Arbeit der Schweiz
+    SD: Schweizer Demokraten
+    MCR: Mouvement Citoyens Romands
+    LEGA: Lega dei Ticinesi
+    EAG: Ensemble à Gauche
+    JCVP: Die Junge Mitte
+    JFDP: Jungfreisinnige
+    JGLP: Junge Grünliberale
+    JGPS: Junge Grüne
+    JSVP: Junge SVP
+    JSP: JUSO
+  no_party: Parteilos
+  groups:
+    V: Fraktion der Schweizerischen Volkspartei
+    S: Sozialdemokratische Fraktion
+    ME: Die Mitte-Fraktion. Die Mitte. EVP.
+    RL: FDP-Liberale Fraktion
+    G: Grüne Fraktion
+    GL: Grünliberale Fraktion
+  offices:
+    SR: Ständerat
+    NR: Nationalrat
+    NR+SR: National- und Ständerat
+  navigation:
+    home: Index
+    search: Suche nach Namen
+    about: Über uns
+    how_it_works: So funktioniert's
+    imprint: Impressum
+    privacy: Datenschutz
+    cantons: Kantone
+    parties: Parteien
+  modal:
+    cantons:
+      title: Kantonaler Filter
+      all: Alle
+      deselect: Auswahl aufheben
+      apply: Anwenden
+    parties:
+      title: Partei Filter
+      all: Alle
+      deselect: Auswahl aufheben
+      apply: Anwenden
+    sort:
+      ascending: Aufsteigend
+      descending: Absteigend
+  person:
+    points: "%"
+    personal_info: Angaben zur Person
+    office: Kandidiert für
+    canton: Kanton
+    party: Partei
+    group: Fraktion
+    birthdate: Geburtsdatum
+    votes: Abstimmungen
+    survey: Umfrage
+    no_score: Kein Score
+    not_enough_votes: Zu wenig Abstimmungen
+  date:
+    formats:
+      long: "%d. %B %Y" 
+  time:
+    formats:
+      long: "%H:%M:%S %Z %d.%m.%Y"
+  no_results: "Es gibt keine Ergebnisse, die Ihrer Suche / Filter entsprechen."
+  votation:
+    weight: Gewichtung
+    voted_yes: Mit Ja gestimmt
+    voted_no: Mit Nein gestimmt
+    voted_abstention: Enthalten
+    voted_absent: Abwesend
+    voted_absent_excused: Entschuldigt
+    voted_presidency: Präsidium
+    business: Geschäft
+    vote: Abstimmung
+  business:
+    type:
+      business_type1: Motion
+      business_type2: Postulat
+      business_type3: Geschäft des Bundesrates
+      business_type4: Parlamentarische Initiative
+  survey:
+    title: Umfrage
+    responded_rather_yes: Mit Eher Ja geantwortet
+    responded_yes: Mit Ja geantwortet
+    responded_rather_no: Mit Eher Nein geantwortet
+    responded_no: Mit Nein geantwortet
+    responded_no_answer: Keine Antwort
+    no_responses: hat keine Antworten für diese Umfrage eingereicht
+  show_more: Mehr anzeigen
+  show_less: Weniger anzeigen
+  imprint:
+    paragraphs:
+      p1: "Herausgeheben von:"
+      p2: Verein CH++<br>Sattelgasse 4<br>4051 Basel
+      p3: <a href="mailto:hello@chplusplus.org">hello@chplusplus.org</a>
+  privacy:
+    paragraphs:
+      p1: "Der Schutz der Privatsphäre und der Datenschutz sind uns wichtig. Das CH++ Techrating sammelt deshalb keine persönlichen Daten der Benutzer."
+  about:
+    paragraphs:
+      p1: "CH++ ist eine zivilgesellschaftliche Organisation, die für mehr Wirksamkeit in der Schweizer Politik und Verwaltung durch Technologie und Wissenschaft kämpft. Wir wollen eine handlungsfähige Schweiz, die Entscheide mit der Wissenschaft fällt und solide & wirksam mit Technologie umsetzt. Dies ist nur möglich, wenn neue politische Rahmenbedingungen entstehen, die fachliche Kompetenz, Risikokultur & Zusammenarbeit schaffen."
+      p2: "Um dieses Ziel zu erreichen, bauen wir auf Öffentlichkeitsarbeit, Advocacy und Kampagnen gemeinsam mit einer starken digitalen Community, die unsere Anliegen trägt."
+      p3: "Wir geben den fachlichen und progressiven Stimmen ein Zuhause und sorgen dafür, dass sie in Medien & Politik mehr Raum bekommen."
+      p4: "Die Umsetzung wurde unterstützt von:"
+    links:
+      href1: "https://chplusplus.org/de/mitglied-werden/"
+      text1: "Mitglied werden"
+      href2: "https://chplusplus.org/de/spenden/"
+      text2: "Spenden"
+      href3: "https://chplusplus.org/de/unsere-positionen/"
+      text3: "Unsere Positionen"
+      href4: "https://chplusplus.org/de/uber-uns/"
+      text4: "Unser Team"
+      href5: "https://demosquare.ch"
+      text5: "Demosquare"
+      href6: "https://www.risiko-dialog.ch/"
+      text6: "Stiftung Risiko-Dialog"
+  detail:
+    overview:
+      title: "Worum geht es?"
+      paragraphs:
+        p1: "Wir leben in einer Zeit von tiefgreifenden Krisen und gleichzeitig riesigen Chancen. Ob Digitalisierung, künstliche Intelligenz, Cybersicherheit, Pandemien oder Klimawandel: heute ist es unabdingbar, dass Politikerinnen und Politiker technologisch versiert sind und ein Verständnis für die Wissenschaft mitbringen. Denn nur mit solidem wissenschaftlichem Fundament und dem effektiven Einsatz moderner Technologien können wir an der Spitze bleiben und die Zukunft prägen - im Interesse des Gemeinwohls, unserer Gesundheit, und unseres Wohlstands."
+        p2: "Die Pandemie und verschiedene Digitalisierungs-Debakel haben vielen die Augen geöffnet: <b>Wissenschaft und Technologie sind essenziell für unsere Zukunft</b>. Aber dennoch finden sie im Wahlkampf nur ungenügend  Beachtung. Dies muss sich ändern. Ein wachsender Anteil der Bevölkerung erwartet von ihren Bundeshaus-Vertreter:innen Kenntnisse in Wissenschaft und Technologie. Um für mehr Transparenz zu sorgen, haben wir das CH++ Techrating ins Leben gerufen. Dies ermöglicht, die Kompetenzen und Affinitäten der Kandidierenden in den Bereichen Wissenschaft und Technologie aufzuzeigen."
+        p3: "Um das CH++ Techrating als Wahlhilfe zu vereinfachen, können Kandidierende nach Kanton und Partei gefiltert werden."
+    technical_details:
+      title: "Technische Details"
+      paragraphs:
+        p1: "Das CH++ Techrating für Neukandidierende besteht nur aus einer Komponente, nämlich den Ansichten zu Themen, die für CH++ relevant sind, erfasst via Fragebogen. Im Gegensatz dazu integriert das <a href=\"https://www.techrating.ch\">CH++ Techrating für Bisherige (https://www.techrating.ch)</a> auch das Abstimmungsverhalten in der letzten Legislaturperiode."
+        p2: "Folgende Kriterien wurden für die Auswahl von Abstimmungen und Fragen angewendet:"
+        p3: "Für jede Abstimmung und jede Frage gibt es für CH++ eine Idealposition. Das CH++ Techrating misst, wie stark eine Person in ihrem Abstimmungsverhalten und / oder in ihren Antworten mit den Ansichten von CH++ übereinstimmt. Je näher dieser Wert an 100% ist, desto stärker ist die Übereinstimmung."
+        p4: "Um es vorwegzunehmen: Dies ist kein wissenschaftliches Rating, sondern ein subjektives Verfahren. Die Abstimmungen und Fragen wurden so ausgewählt, dass sie in der Sicht von CH++ sehr gut die technologische und wissenschaftliche Affinität abbilden."
+      keys:
+        k1: "Abstimmungen in Themenbereichen, die zu den Kernanliegen von CH++ gehören."
+        k2: "Abstimmungen, die zu einer raschen und verantwortungsvollen Digitalisierung beitragen (Dezentralität, Datensparsamkeit, Open Source, Open Data, security by design, etc.)"
+        k3: "Abstimmungen, die die Rolle der Wissenschaft als Entscheidungsgrundlage stärken."
+        k4: "Abstimmungen zu konkreten Vorschlägen zur Verbesserung der Krisenresilienz der Schweiz."   
+      voting:
+        title: "Abstimmungen"
+        paragraphs:
+          p1: "Für jede relevante Abstimmung haben wir nebst einer Idealposition (z.B. \"Ja\") auch eine Gewichtung definiert. Dies erlaubt es uns, besonders wichtigen Abstimmungen mehr Gewicht zu geben. Die maximale Punktzahl pro Abstimmung wird durch die Gewichtung definiert."
+          p2: "Für jede berücksichtigte Abstimmung gilt der folgende Schlüssel:"
+          p3: "Entschuldigte Abstimmungen oder Absenz wegen Innehalten eines Präsidiums werden nicht berücksichtigt."
+          p4: "Für alle berücksichtigten Abstimmungen wird die maximale Punktzahl berechnet. Die realisierte Punktzahl wird danach in ein prozentuales Abstimmungsergebnis umgerechnet."
+          p5: "<b>Beispiel</b>: Für alle berücksichtigen Abstimmungen einer Person ist das Maximum 25 Punkte. Die Person hat durch ihr Abstimmungsverhalten 20 Punkte erreicht. Das Abstimmungsergebnis entspricht 20/25 = 80%."
+        keys:
+          k1: "Stimme identisch zu CH++ Idealposition: 100%"
+          k2: "Stimme gegenteilig von CH++ Idealposition: 0%"
+          k3: "Stimme enthalten, oder unentschuldigt abwesend: 50%"
+      questionnaire:
+        title: "Fragebogen"
+        paragraphs:
+          p1: "Alle 14 Fragen wurden gleich gewichtet und so formuliert, dass die CH++ Idealantwort \"Ja\" ist. Für jede Frage gilt der folgende Schlüssel:"
+          p2: "Für nicht ausgefüllte Fragebögen wurden alle Fragen mit \"Keine Antwort\" gekennzeichnet."
+          p3: "Die maximale Punktzahl ist 14. Die realisierte Punktzahl wird danach in ein prozentuales Fragebogenergebnis umgerechnet."
+          p4: "<b>Beispiel:</b> Die Person hat durch ihre Antworten 10 Punkte erreicht. Das Fragebogenergebnis entspricht 10/14 = 71.4%."
+        keys:
+          k1: "Mit Ja geantwortet: 100%"
+          k2: "Mit Eher Ja geantwortet: 75%"
+          k3: "Keine Antwort: 50%"
+          k4: "Mit Eher Nein geantwortet: 25%"
+          k5: "Mit Nein geantwortet: 0%"
+      overall_results:
+        title: "Gesamtresultat"
+        weighting:
+          w1: "Abstimmungsergebnis: 2/3"
+          w2: "Fragebogenergebnis: 1/3"
+        paragraphs:
+          p1: "Das Gesamtresultat wurde wie folgt gewichtet:"
+          p2: "Diese Gewichtung berücksichtigt, dass Taten lauter sprechen als Worte."
+          p3: "<b>Beispiel:</b> Die Person hat ein Abstimmungsergebnis von 80% und ein Fragebogenergebnis von 71.4%. Das Gesamtresultat ist (2 * 80% + 71.4%) / 3 = 77.1%."
+          p4: "Personen können einen zusätzlichen Boost von bis zu 10% aufgrund besonderer Unterstützung der CH++ Ziele erhalten. Die Auswahl für diesen Bonus erfolgt durch CH++ Vorstands- oder Beiratsmitglieder. Das Total kann jedoch 100% nicht überschreiten."
+    how_to_use:
+      title: "Wie Sie das CH++ Techrating nutzen können"
+      paragraphs:
+        p1: "Das CH++ Techrating bietet einen Einblick in die technologische und wissenschaftliche Kompetenz und Affinität von Politikerinnen und Politikern. Es dient als Orientierungshilfe, um besser einschätzen zu können, welchen Stellenwert Wissenschaft und Technologie in ihrer politischen Agenda einnehmen."
+        p2: "Nutzen Sie das CH++ Techrating, um sich ein Bild von der technologischen und wissenschaftlichen Einstellung Ihrer Kandidierenden zu machen. Es hilft Ihnen, informierte Entscheidungen bei Wahlen zu treffen."
+        p3: "Bitte beachten Sie, dass das CH++ Techrating eine Momentaufnahme darstellt und auf den aktuellen Daten basiert. Es ist als ergänzendes Informationsinstrument gedacht und sollte in Kombination mit anderen Faktoren und Informationsquellen herangezogen werden, wenn es darum geht, sich eine Meinung zu bilden."
+
+

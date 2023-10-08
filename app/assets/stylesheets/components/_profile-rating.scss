@@ -1,0 +1,111 @@
+.profile-rating {
+  position: relative;
+
+  img {
+    border-radius: 50%;
+    position: absolute;
+    height: auto;
+    width: 9.2rem;
+    top: 1.4rem;
+    left: 1.4rem;
+    z-index: 5;
+  }
+
+  svg {
+    display: inline-flex;
+    vertical-align: bottom;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  circle {
+    stroke: transparent;
+    stroke-width: 5px;
+    stroke-dasharray: 0;
+    fill: none;
+  }
+
+  .meter {
+    stroke-width: 5px;
+    stroke: transparent;
+    fill: none;
+    transition: stroke-dashoffset 1s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    transform-origin: center center;
+    transform: rotate(-90deg) scaleX(-1);
+  }
+}
+
+.profile-rating-sm {
+  @extend .profile-rating;
+
+  img {
+    width: 5.6rem;
+    top: .8rem;
+    left: .8rem;
+  }
+
+  svg {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+}
+
+.rating-positive {
+  circle {
+    stroke: var(--positive-light);
+  }
+
+  .meter {
+    stroke: var(--positive)
+  }
+}
+
+.rating-neutral {
+  circle {
+    stroke: var(--neutral-light);
+  }
+
+  .meter {
+    stroke: var(--neutral);
+  }
+}
+
+.rating-negative {
+  circle {
+    stroke: var(--negative-light);
+  }
+
+  .meter {
+    stroke: var(--negative);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .profile-rating-sm {
+    img {
+      width: 5.2rem;
+      top: .8rem;
+      left: .8rem;
+    }
+
+    svg {
+      width: 6.8rem;
+      height: 6.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-rating {
+    img {
+      width: 5.6rem;
+      top: .8rem;
+      left: .8rem;
+    }
+
+    svg {
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+  }
+}

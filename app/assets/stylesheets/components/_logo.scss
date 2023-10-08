@@ -1,0 +1,40 @@
+.logo {
+  background: asset-url('logo.svg') no-repeat;
+  background-size: cover;
+  border-radius: .4rem;
+  display: block;
+  height: 3rem;
+  width: 10rem;
+
+  &:focus {
+    outline: var(--outline-white);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .logo {
+    height: 2.7rem;
+    width: 9rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .logo {
+    height: 2.4rem;
+    width: 8rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 2.1rem;
+    width: 7rem;
+  }
+}
+
+#alt-theme {
+	.logo {
+		background: url('logo-reverse.svg') no-repeat;
+		background-size: cover;
+	}
+}

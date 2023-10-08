@@ -1,0 +1,65 @@
+<section class="detail-section">
+
+<% total_responses = person.responses.where.not(content: nil).count %>
+<% items_to_show = 15 %>
+<% Survey.all.each do |survey| %>
+  <h2><%= t("survey.title") %> <%= survey.title_de %></h2>
+  <div class="vote-list">
+    <% if total_responses > items_to_show %>
+      <div class="hide-items-gradient-survey"></div>
+    <% end %>
+    <% responses_to_current_survey = [] %>
+
+    <% survey.questions.each do |question| %>
+      <% response = person.responses.includes(:question).find_by(question: question) %>
+
+      <% if response && !response.content.nil? %>
+        <% responses_to_current_survey << response %>
+
+        <% 
+        response_sentiment = 'negative'
+        if response.content == 'Keine Antwort'
+          response_sentiment = 'neutral'
+        elsif response.content == 'Ja' or response.content == 'Eher Ja'
+          response_sentiment = 'positive'
+        end
+        %>
+
+        <div class="vote-item <%= 'hide-item-survey' if responses_to_current_survey.count > items_to_show %>">
+          <span class="question"><%= question.send("title_#{I18n.locale}") %></span>
+
+          <div class="badges">
+            <span class="badge-<%=response_sentiment%>">
+              <%=
+                case response.content
+                when "Eher Ja"
+                  t("survey.responded_rather_yes")
+                when "Ja"
+                  t("survey.responded_yes")
+                when "Eher Nein"
+                  t("survey.responded_rather_no")
+                when "Nein"
+                  t("survey.responded_no")
+                when "Keine Antwort"
+                  t("survey.responded_no_answer")
+                end
+              %>
+            </span>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if responses_to_current_survey.empty? %>
+      <div class="vote-item">
+        <span class="question"><%=person.first_name %> <%=person.last_name %> <%= t('survey.no_responses') %>.</span>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<% if total_responses > items_to_show %>
+<a class="button-show button-show-survey" data-show-text="<%= t('show_more') %>" data-hide-text="<%= t('show_less') %>"><%=t("show_more")%></a>    
+<% end %>
+
+</section>

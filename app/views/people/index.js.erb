@@ -1,0 +1,7 @@
+$('#people-container').append('<%= j render @people %>');
+radialBar();
+<% if @has_more_people %>
+  window.hasMorePeople = true;
+<% else %>
+  window.hasMorePeople = false;
+<% end %>

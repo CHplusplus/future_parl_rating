@@ -1,0 +1,62 @@
+<header class="navbar">
+  <a href="https://www.techrating.ch/<%= I18n.locale %>" class="banner">
+  <span class="banner-text"><%=t("banner_text")%></span><i class="icon ph ph-arrow-up-right"></i>
+  </a>
+  <div class="content-center">
+    <div class="brand">
+    <%= link_to people_path, class:"logo" do %>
+      <span class="sr-only">CH++</span>
+    <% end %>
+    </div>
+
+    <ul class="nav-main">
+      <li><%= link_to t("navigation.home"), people_path, class: active_class_for_home %></li>
+      <li><%= link_to t("navigation.how_it_works"), detail_path, class: "#{'active' if current_page?(detail_path)}" %></li>
+      <li><%= link_to t("navigation.about"), apropos_path, class: "#{'active' if current_page?(apropos_path)}" %></li>
+    </ul>
+
+
+
+    <div class="language-selector">
+      <button class="language-button"><%= I18n.locale.upcase %></button>
+
+      <div id="language-dropdown" class="language-dropdown">
+        <ul>
+          <li>
+            <%= link_to "Deutsch <i class='icon ph ph-check-circle-fill'></i>".html_safe, url_for(locale: 'de'), class: I18n.locale == :de ? 'active' : '' %>
+          </li>
+          <li>
+            <%= link_to "Français <i class='icon ph ph-check-circle-fill'></i>".html_safe, url_for(locale: 'fr'), class: I18n.locale == :fr ? 'active' : '' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="button-menu"><i class="icon ph ph-list"><span class="sr-only">Menu</span></i></button>
+  </div>
+</header>
+<!-- /navbar -->
+
+<nav class="mobile-nav">
+  <button class="nav-close"><i class="icon ph ph-x"><span class="sr-only">Close</span></i></button>
+  <ul class="nav-list">
+    <li>
+    <%= link_to t("navigation.home"), people_path %>
+    </li>
+    <li>
+    <%= link_to t("navigation.how_it_works"), detail_path %>
+    </li>
+    <li>
+      <%= link_to t("navigation.about"), apropos_path %>
+    </li>
+  </ul>
+
+  <ul class="social-links">
+    <li><a href="https://www.facebook.com/chplusplus" class="facebook"><i class="icon ph ph-facebook-logo"><span class="sr-only">Facebook</span></i></a></li>
+    <li><a href="https://www.linkedin.com/company/chplusplus/" class="linkedin"><i class="icon ph ph-linkedin-logo"><span class="sr-only">LinkedIn</span></i></a></li>
+    <li><a href="https://mastodon.social/@chplusplus@techhub.social"><img src="<%=asset_url('mastodon-logo-white.svg')%>" alt="Mastodon"></a></li>
+    <li><a href="https://twitter.com/chplusplus" class="twitter"><i class="icon ph ph-twitter-logo"><span class="sr-only">Twitter</span></i></a></li>
+    <li><a href="https://www.youtube.com/channel/UCslsQ44lO2voIQCwl-ysFCA" class="youtube"><i class="icon ph ph-youtube-logo"><span class="sr-only">YouTube</span></i></a></li>
+  </ul>
+</nav>
+<!-- /mobile-nav -->

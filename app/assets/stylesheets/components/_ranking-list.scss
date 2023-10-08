@@ -1,0 +1,26 @@
+.ranking-list {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  @extend .page-margin;
+
+  .content-center {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ranking-list {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ranking-list {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}

@@ -1,0 +1,84 @@
+.input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-clip: padding-box;
+  background-color: var(--galactic);
+  border: 1px solid var(--galactic);
+  border-radius: var(--rounded-md);
+  color: #FFF;
+  display: block;
+  height: var(--input-height-xl);
+  padding: 0 1.6rem;
+  width: 100%;
+  @include transition;
+
+  &:focus {
+    outline: var(--outline-white);
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, .6);
+  }
+}
+
+.input-search {
+  background-image: asset-url('magnifying-glass.svg');
+  background-position: 1.6rem center;
+  background-repeat: no-repeat;
+  padding: 0 1.6rem 0 5.2rem;
+  @extend .input;
+}
+
+.input-search::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	cursor: pointer;
+	height: 2rem;
+	width: 2rem;
+	background-image: url('/images/x-fill.svg');
+}
+
+.input-search::selection {
+  background-color: #b3d4fc; /* or any other desired color */
+}
+
+@media only screen and (max-width: 1200px) {
+  .input {
+    height: var(--input-height-lg);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .input {
+    height: var(--input-height-md);
+    padding: 0 1.2rem;
+  }
+
+  .input-search {
+    background-position: 1.2rem center;
+    padding: 0 1.2rem 0 4.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input {
+    height: var(--input-height-sm);
+  }
+}
+
+#alt-theme {
+	.input-search {
+		background-color: var(--lighthouse);
+		border: 1px solid var(--lighthouse);
+		background-image: url('magnifying-glass-reverse.svg');
+		color: var(--nightshade-blue);
+
+		&::placeholder {
+			color: var(--stormcloud);
+		}
+	}
+
+	.input-search::-webkit-search-cancel-button {
+		background-image: url('x-fill-reverse.svg');
+	}
+}

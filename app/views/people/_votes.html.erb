@@ -1,0 +1,60 @@
+<section class="detail-section">
+  <h2><%= t("person.votes") %></h2>
+
+  <div class="vote-list">
+    <div class="hide-items-gradient"></div>
+
+    <% person.votes.each_with_index do |vote, index| %>
+
+      <% 
+      vote_sentiment = 'negative'
+      if vote.position == 2 or vote.position == 3 or vote.position == 4 or vote.position == 5
+        vote_sentiment = 'neutral'
+      elsif vote.position == vote.votation.idealposition
+        vote_sentiment = 'positive'
+      end
+      %>
+      <div class="vote-item <%= 'hide-item' if index > 3 %>">
+      <%= link_to vote.business.send("link_#{I18n.locale}") do %>
+        <%=t("business.type.#{vote.business.business_type}")%>: <%= vote.business.send("title_#{I18n.locale}") %>
+        <i class="ph ph-arrow-square-out"></i>
+      <% end %>
+
+
+        <p><%= vote.votation.send("explanation_#{I18n.locale}") %></p>
+
+        <div class="badges">
+          <div>
+            <span class="badge-<%= vote_sentiment %>"><%= t("votation.weight") %>: <%=vote.votation.weight%></span>
+            <span class="badge-<%= vote_sentiment %>">
+            <%=
+            if vote.position == 0
+              t("votation.voted_no")
+            elsif vote.position == 1
+              t("votation.voted_yes")
+            elsif vote.position == 2
+              t("votation.abstention")
+            elsif vote.position == 3
+              t("votation.voted_absent_excused")
+            elsif vote.position == 4
+              t("votation.voted_absent")
+            elsif vote.position == 5
+              t("votation.presidency")
+            end
+            %>
+            </span>
+          </div>
+
+          <span class="badge"><%= t("votation.business") %>: <%=vote.votation.business.shortnumber%></span>
+          <span class="badge"><%= t("votation.vote") %>: <%=vote.votation.reference%></span>
+
+        </div>
+      </div>
+    <% end %> 
+
+  </div>
+  <!-- /vote-list -->
+
+  <a class="button-show" data-show-text="<%= t('show_more') %>" data-hide-text="<%= t('show_less') %>"><%=t("show_more")%></a>
+
+</section>

@@ -1,0 +1,54 @@
+.nav-main {
+  background-color: var(--galactic);
+  border-radius: 3rem;
+  display: inline-flex;
+  color: white;
+  font-weight: 450;
+  gap: .4rem;
+  list-style: none;
+  padding: .8rem;
+
+  a {
+    border-radius: 2.2rem;
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    padding: 0 2.4rem;
+    @include transition;
+
+    &:focus {
+      border: none;
+      outline: var(--outline-white);
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, .8);
+    }
+  }
+
+  .active {
+    background-color: var(--spanish-violet);
+  }
+}
+
+#alt-theme {
+	.nav-main {
+		background-color: var(--lighthouse);
+		color: var(--nightshade-blue);
+
+		a {
+			&:hover {
+				color: var(--spanish-violet);
+			}
+		}
+
+		.active {
+			background-color: var(--spanish-violet);
+			color: white;
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}

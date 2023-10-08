@@ -1,0 +1,33 @@
+.badge {
+  background-color: var(--radisson);
+  border-radius: 1.2rem;
+  color: var(--storm-cloud);
+  display: inline-flex;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: .2rem .8rem;
+}
+
+.badge-positive {
+  background: var(--positive-light);
+  color: var(--positive);
+  @extend .badge;
+}
+
+.badge-neutral {
+  background: var(--neutral-light);
+  color: var(--neutral);
+  @extend .badge;
+}
+
+.badge-negative {
+  background: var(--negative-light);
+  color: var(--negative);
+  @extend .badge;
+}
+
+@media only screen and (max-width: 600px) {
+  .badge {
+    font-size: 1.1rem;
+  }
+}

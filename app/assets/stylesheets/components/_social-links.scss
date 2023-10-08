@@ -1,0 +1,54 @@
+.social-links {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    height: 3.2rem;
+    width: 3.2rem;
+    padding: 0;
+    @extend .button;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .facebook {
+    color: #1A73E3;
+  }
+
+  .linkedin {
+    color: #0C66C2;
+  }
+
+  .twitter {
+    color: #1D9BEF;
+  }
+
+  .youtube {
+    color: #FF0100;
+  }
+
+  img {
+		height: auto;
+		width: 1.8rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+  .social-links {
+    gap: 1.2rem;
+    
+    .icon {
+      font-size: 1.6rem;
+    }
+
+    img {
+			height: auto;
+			width: 1.6rem;
+		}
+  }
+}

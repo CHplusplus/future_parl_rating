@@ -1,0 +1,53 @@
+.article {
+  @extend .page-margin;
+
+  .content-center {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--text-lg);
+    max-width: 72rem;
+    padding: 6.4rem 0 12.8rem;
+    word-wrap: break-word;
+
+    h2 {
+      color: var(--spanish-violet);
+      font-size: var(--text-2xl);
+      font-weight: 450;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h3 {
+      color: var(--spanish-violet);
+      font-size: var(--text-xl);
+      font-weight: 450;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    a {
+      color: var(--pelorus);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+.article .content-center > * + * {
+  margin-top: 3rem;
+}
+
+.article .content-center > * + h2 {
+  margin-top: 6rem;
+}
+
+.article .content-center > * + h3 {
+  margin-top: 4rem;
+}

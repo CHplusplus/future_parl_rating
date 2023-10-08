@@ -1,0 +1,17 @@
+.button-menu {
+  color: #FFF;
+  height: auto;
+  padding: .4rem;
+  @extend .button;
+
+  .icon {
+    font-size: 2.4rem;
+  }
+}
+
+
+#alt-theme {
+	.button-menu {
+		color: var(--nightshade-blue);
+	}
+}

@@ -1,0 +1,71 @@
+:root {
+  // border
+  --border-light: 1px solid var(--radisson);
+
+  // border-radius
+  --rounded-6xl: 6rem;
+  --rounded-5xl: 4.8rem;
+  --rounded-4xl: 4rem;
+  --rounded-3xl: 3.2rem;
+  --rounded-2xl: 2.4rem;
+  --rounded-xl: 2rem;
+  --rounded-lg: 1.6rem;
+  --rounded-md: 1.2rem;
+  --rounded-sm: .8rem;
+  --rounded-xs: .4rem;
+
+  // color
+  --galactic: #401978;
+  --spanish-violet: #532A92;
+  --pompadour: #643BA2;
+  --pelorus: #239FB9;
+  --nightshade-blue: #2B3436;
+  --storm-cloud: #7F8283;
+  --moon-landing: #A6A7A8;
+  --sea-frost: #D6DADA;
+  --radisson: #E1E4E4;
+  --lighthouse: #F5F7F7;
+  --positive: var(--pelorus);
+  --positive-light: #DBF0F4;
+  --neutral: #d09820;
+  --neutral-light: #F8EFDC;
+  --negative: #C85555;
+  --negative-light: #F8EBEB;
+
+  // font-size
+  --text-3xl: clamp(3.2rem, 2.2667rem + 3.7333vw, 6rem);
+  --text-2xl: clamp(2.2rem, 1.8667rem + 1.3333vw, 3.2rem);
+  --text-xl: clamp(1.9rem, 1.7333rem + 0.6667vw, 2.4rem);
+  --text-lg: clamp(1.7rem, 1.6rem + 0.4vw, 2rem);
+  --text-md: clamp(1.4rem, 1.3333rem + 0.2667vw, 1.6rem);
+  --text-sm: clamp(1.2rem, 1.1333rem + 0.2667vw, 1.4rem);
+
+  // input height
+  --input-height-xl: 6rem;
+  --input-height-lg: 5.2rem;
+  --input-height-md: 4.8rem;
+  --input-height-sm: 4.4rem;
+  --input-height-xs: 4rem;
+
+  // outline
+  --outline-primary: .4rem solid rgba(83, 42, 146, .2);
+  --outline-white: .4rem solid rgba(255, 255, 255, .2);
+
+  // shadow
+  --box-shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.25);
+
+  // layout
+  --navbar-height: 11.4rem;
+  --navbar-height-md: 8rem;
+  --navbar-height-sm: 6.4rem;
+
+  // modal 
+  --modal-padding: 2.4rem;
+  --modal-padding-sm: 2rem;
+
+  // z-index
+  --layer-dropdown: 75;
+  --layer-mobile-nav: 100;
+  --layer-modal: 150;
+  --layer-navbar: 50;
+}

@@ -1,0 +1,89 @@
+<% rating_class, percentage = rating_class_and_percentage(@person.points) %>
+<div class="detail">
+      <div class="content-center">
+        <div class="col">
+          <header class="detail-header">
+            <figure class="profile-rating rating-<%= rating_class %>">
+            <% if @person.image.attached? %>
+            <%= image_tag url_for(@person.image), alt: @person.full_name %>
+            <% else %>
+            <%= image_tag asset_url('pp-placeholder.png'), alt: @person.full_name %>
+            <% end %>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" data-value="<%= percentage %>">
+                <% if percentage > 0 %>
+                <circle r="45" cx="50" cy="50" />
+                <path class="meter" d="M5,50a45,45 0 1,0 90,0a45,45 0 1,0 -90,0" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="282.78302001953125" stroke-dasharray="282.78302001953125" />
+                <% end %>
+              </svg>
+            </figure>
+
+            <div class="text">
+              <h1 class="name"><%=@person.first_name%> <%=@person.last_name%></h1>
+              <div class="details">
+                <span class="party"><%= @person.party.present? ? t("parties.#{@person.party}") : t("no_party") %></span>
+                <span class="kanton"><%= t("cantons.#{@person.canton}") %></span>
+              </div>
+              <% if percentage > 0 %>
+                <div class="points-<%= rating_class %>">
+                  <span><%=number_with_precision(@person.points, precision: 1, strip_insignificant_zeros: true)%> <%= t("person.points") %></span>
+                  <span class="reputation">
+                    <% if @person.reputation.present? %>
+                      <% number_of_rockets = case @person.reputation
+                        when 1
+                          1
+                        when 1.5
+                          2
+                        when 2
+                          3
+                        else
+                          0
+                        end %>
+                      <% number_of_rockets.times do %>
+                        <i class="ph ph-rocket-launch"></i>
+                      <% end %>
+                    <% end %>
+                  </span>
+                </div>
+              <% else %>
+              <span><b><%= t("person.no_score") %></b> - <i><%= t("person.not_enough_votes") %></i></span>
+              <% end %>
+            </div>
+          </header>
+          <!-- /detail-header -->
+
+          <section class="detail-section">
+            <h2><%= t("person.personal_info") %></h2>
+
+            <dl>
+              <dt><%= t("person.office") %></dt>
+              <dd><%= @person.office.present? ? t("offices.#{@person.office}") : "" %></dd>
+              <dt><%= t("person.canton") %></dt>
+              <dd><%= t("cantons.#{@person.canton}") %></dd>
+              <dt><%= t("person.party") %></dt>
+              <dd><%= @person.party.present? ? t("parties.#{@person.party}") : t("no_party") %></dd>
+              <dt><%= t("person.birthdate") %></dt>
+              <dd><%= @person.date_of_birth&.strftime("%d. %m. %Y") %></dd>
+            </dl>
+
+          </section>
+          <!-- /detail-section -->
+
+
+        </div>
+        <!-- /col -->
+
+        <div class="col">
+         
+
+          <%= render partial: 'surveys', locals: { person: @person } %>
+
+          <!-- /detail-section -->
+
+        </div>
+        <!-- /col -->
+
+      </div>
+    </div>
+    <!-- /detail -->
+
+

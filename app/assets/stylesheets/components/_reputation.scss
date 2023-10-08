@@ -1,0 +1,10 @@
+.reputation {
+	display: flex;
+	font-size: 1.6rem ;
+	gap: .2rem;
+	line-height: 1;
+
+	.empty {
+		color: var(--moon-landing);
+	}
+}
