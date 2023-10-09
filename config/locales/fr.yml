@@ -155,7 +155,7 @@ fr:
       title: "De quoi s'agit-il?"
       paragraphs:
         p1: "Nous vivons à une époque de crises profondes et en même temps d'énormes opportunités. Qu'il s'agisse de digitalisation, d'intelligence artificielle, de cybersécurité, de pandémies ou de changement climatique, il est essentiel aujourd'hui que les politiciens soient technologiquement compétents et aient une compréhension de la science. Car ce n'est qu'avec une base scientifique solide et l'utilisation efficace des technologies modernes que nous pourrons rester à la pointe et façonner l'avenir - dans l'intérêt du bien commun, de notre santé et de notre prospérité."
-        p2: "La pandémie et divers déboires de digitalisation ont ouvert les yeux à beaucoup : <b>La science et la technologie sont essentielles pour notre avenir</b>. Pourtant, elles ne reçoivent pas assez d'attention lors des campagnes électorales. Cela doit changer. Une proportion croissante de la population attend de ses représentants au Parlement une connaissance de la science et de la technologie. Pour plus de transparence, nous avons créé le CH++ Techrating. Cela nous permet de montrer les affinités des candidats dans les domaines de la science et de la technologie."
+        p2: "La pandémie et divers déboires de digitalisation ont ouvert les yeux à beaucoup : <b>La technologie et la science sont essentielles pour notre avenir</b>. Pourtant, elles ne reçoivent pas assez d'attention lors des campagnes électorales. Cela doit changer. Une proportion croissante de la population attend de ses représentants au Parlement une connaissance de la technologie et de la science. Pour plus de transparence, nous avons créé le CH++ Techrating. Cela nous permet de montrer les affinités des candidats dans les domaines de la technologie et de la science."
         p3: "Pour simplifier l'utilisation du CH++ Techrating comme aide électorale, les candidats peuvent être filtrés par canton et par parti."
     technical_details:
       title: "Détails techniques"
@@ -207,7 +207,7 @@ fr:
     how_to_use:
       title: "Comment utiliser le CH++ Techrating"
       paragraphs:
-        p1: "Le CH++ Techrating offre un aperçu de l'affinité technologique et scientifique des politiciens et politiciennes. Il sert de guide pour mieux évaluer l'importance de la science et de la technologie dans leur agenda politique."
+        p1: "Le CH++ Techrating offre un aperçu de l'affinité technologique et scientifique des politiciens et politiciennes. Il sert de guide pour mieux évaluer l'importance de la technologie et de la science dans leur agenda politique."
         p2: "Utilisez le CH++ Techrating pour vous faire une idée de l'attitude technologique et scientifique de vos candidats. Il vous aide à prendre des décisions éclairées lors des élections."
         p3: "Veuillez noter que le CH++ Techrating représente une image instantanée et est basé sur les données actuelles. Il est conçu comme un outil d'information complémentaire et doit être utilisé en combinaison avec d'autres facteurs et sources d'information lorsque vous formez une opinion."
     coda:
