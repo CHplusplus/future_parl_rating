@@ -21,7 +21,8 @@ PARTY_ABBR = {
   "Junge Grüne" => "JGPS",
   "Jungfreisinnige" => "JFDP",
   "JUSO" => "JSP",
-  "Junge SVP" => "JSVP"
+  "Junge SVP" => "JSVP",
+  "Piratenpartei Schweiz" => "PPS"
 }
 
 # Define the mapping of cantons to their abbreviations
