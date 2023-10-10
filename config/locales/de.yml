@@ -219,6 +219,6 @@ de:
     coda:
       title: "CODA"
       paragraphs:
-        open: "Code und Daten des CH++ Techratings sind selbstverständlich öffentlich zugänglich:<ul><li>Code: <a href=\"https://github.com/CHplusplus/futuretechrating\">https://github.com/CHplusplus/futuretechrating</a></li><li>Daten: <a href=\"https://www.futuretechrating.ch/data_export.zip\">https://www.futuretechrating.ch/data_export.zip</a></li></ul>"
+        open: "Code und Daten des CH++ Techratings sind selbstverständlich öffentlich zugänglich:<ul><li>Code: <a href=\"https://github.com/CHplusplus/futuretechrating\">https://github.com/CHplusplus/futuretechrating</a></li><li>Daten: <a href=\"https://www.futuretechrating.ch/static/data_export\">https://www.futuretechrating.ch/static/data_export</a></li></ul>"
 
 
