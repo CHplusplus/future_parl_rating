@@ -1,4 +1,5 @@
 require 'zip'
+require 'aws-sdk-s3'
 
 # frozen_string_literal: true
 ActiveAdmin.register_page "Dashboard" do
@@ -41,18 +42,33 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    # Zip the CSV files
-    zip_file_path = Rails.root.join('public', 'data_export.zip')
-    File.delete(zip_file_path) if File.exist?(zip_file_path)
-    Zip::File.open(zip_file_path, Zip::File::CREATE) do |zipfile|
-      csv_files.each do |file|
-        zipfile.add(File.basename(file), file)
-      end
-    end
+    # Initialize the S3 client
+  s3 = Aws::S3::Client.new(
+    region: 'eu-central-1',
+    access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+  )
 
-    # Clean up individual CSV files
-    csv_files.each { |file| File.delete(file) }
-    redirect_to admin_dashboard_path, notice: "Data successfully exported."
+  # Zip the CSV files
+  zip_file_path = Rails.root.join('tmp', 'data_export.zip')
+  File.delete(zip_file_path) if File.exist?(zip_file_path)
+  
+  Zip::File.open(zip_file_path, Zip::File::CREATE) do |zipfile|
+    csv_files.each do |file|
+      zipfile.add(File.basename(file), file)
+    end
+  end
+
+  # Upload ZIP to S3
+  File.open(zip_file_path, 'rb') do |file|
+    s3.put_object(bucket: 'parliratingimages', key: 'data_export.zip', body: file)
+  end
+
+  # Clean up individual CSV files and the ZIP
+  csv_files.each { |file| File.delete(file) }
+  File.delete(zip_file_path)
+  
+  redirect_to admin_dashboard_path, notice: "Data successfully exported and uploaded to S3."
 
   end
 

@@ -1,3 +1,4 @@
+require 'aws-sdk-s3'
 class StaticPagesController < ApplicationController
 
     def detail
@@ -19,4 +20,15 @@ class StaticPagesController < ApplicationController
         # The page that explains our privacy
         @title = I18n.t("navigation.privacy")
     end
+
+    def data_export
+        s3 = Aws::S3::Client.new(
+          region: 'eu-central-1',
+          access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+          secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+        )
+        
+        object = s3.get_object(bucket: 'parliratingimages', key: 'data_export.zip')
+        send_data object.body.read, filename: 'data_export.zip', type: 'application/zip'
+      end
 end

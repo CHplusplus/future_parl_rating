@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
-  get '/:canton', to: 'people#index', constraints: { canton: /(AG|AR|AI|BL|BS|BE|FR|GE|GL|GR|JU|LU|NE|NW|OW|SH|SZ|SO|SG|TG|TI|UR|VS|VD|ZG|ZH)/ }
+  get '/static/data_export', to: 'static_pages#data_export'
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
